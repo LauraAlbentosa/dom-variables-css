@@ -66,8 +66,28 @@ const colorsRGB = () =>{
 buttonRGBElement.addEventListener('click',colorsRGB)
 
 const colorsHEX = () =>{
+    let posibleCharacters = '0123456789abcdef'
     let colorHEX = '#'
+
+    for (let i = 0; i<3;i++){
+        let index = Math.floor(Math.random()*posibleCharacters.length - 1)
+        colorHEX += posibleCharacters.charAt(index)
+    }
+
+    rootStyles.setProperty('--background-color', colorHEX)
 
 }
 
+buttoHEXElement.addEventListener('click', colorsHEX)
+
 // - Crea un div de 20px x 20px y sincronizalo con el movimiento del ratón, el div deberá quedarse pegado a la flecha de tu ratón y moverse junto a él.
+
+const cursorElement = document.getElementById('cursor')
+
+const trackMovement = (event) =>{
+    rootStyles.setProperty('--left-position', event.clientX + 2 + 'px')
+
+    rootStyles.setProperty('--top-position', event.clientY + 2 +'px')
+}
+
+window.addEventListener('mousemove', trackMovement)

@@ -1,0 +1,9 @@
+.cursor{
+    position: absolute;
+    top: var(--top-position);
+    left: var(--left-position);
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    
+}

@@ -1,6 +1,8 @@
 .container {
-  
-  background-color: red;
+  position: fixed;
+  &--scroll{
+    background-color: red;
   width: var(--div-width);
   height: 20px;
+  }
 }
