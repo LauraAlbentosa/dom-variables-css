@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: #ffffff;
+  background-color: var(--background-color);
   font-family: sans-serif;
   min-height: 500vh;
 }
